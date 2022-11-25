@@ -1,0 +1,4 @@
+match (p1:User), (p2:Build)
+where p1.Builds contains(p2.Name)
+create (p1)-[:HAS_BUILD]->(p2)
+return p1, p2
